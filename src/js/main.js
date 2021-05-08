@@ -1,4 +1,4 @@
-//slider
+//mainslider
 const bannerSlider = new Swiper('.banner-slider', {
   loop: true,
   slidesPerView: 1,
@@ -9,7 +9,12 @@ const bannerSlider = new Swiper('.banner-slider', {
   },
 });
 //
+//catalog-slider
+const catalogSlider = new Swiper('.hero-catalog__slider', {
+  loop: true,
+  slidesPerView: 1,
 
+});
 // close
 const marketing = document.querySelector('.marketing');
 
