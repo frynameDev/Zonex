@@ -13,38 +13,23 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="card-page">
   <div class="site-container">
-    <div class="free-delivery">
-      Free delivery from $60 and free returns
-      <button class="free-delivery__btn btn-reset">
-        <svg class="">
-          <use xlink:href="img/sprite.svg#choice-close"></use>
-        </svg>
-      </button>
-    </div>
     @include('partials/header-catalog.html')
     <main class="main">
-      @include('partials/hero-catalog.html')
-      <section class="catalog">
-        <h2 class="visually-hidden">Catalog</h2>
+      <section class="card">
+        <h2 class="visually-hidden">Product Card</h2>
         @include('partials/breadcrumbs.html')
-        <div class="catalog-content">
-          <div class="container container-narrow">
-            @include('partials/catalog-filter.html')
-            @include('partials/catalog-grid.html')
+        <div class="card-content">
+          <div class="card-content__top">
+            @include('partials/card-top.html')
+            @include('partials/card-bottom.html')
           </div>
         </div>
       </section>
     </main>
 
     @include('partials/footer-2.html')
-
-    <a class="to-top" href="#">
-      <svg>
-        <use xlink:href="img/sprite.svg#to-top"></use>
-      </svg>
-    </a>
     <!-- @include('html/h1.html') пример инклуда -->
   </div>
   <script src="js/vendor.js"></script>

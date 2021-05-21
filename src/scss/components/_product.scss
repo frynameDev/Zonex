@@ -1,11 +1,34 @@
 .product {
   position: relative;
+
   &__image {
+    position: relative;
+    overflow: hidden;
     margin-bottom: 20px;
+
     img {
       max-height: 100%;
       object-fit: cover;
+      transition: transform 0.3s;
     }
+  }
+
+  &__sale {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 20;
+    border: 2px solid var(--color-dark);
+    padding: 4px 10px;
+    font-family: "Jost-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  &__prop {
+    margin-bottom: 10px;
   }
 
   &__title {
@@ -31,5 +54,71 @@
     font-family: "Jost-Bold", sans-serif;
     font-weight: 700;
     font-size: 13px;
+  }
+
+  &__oldprice {
+    margin-left: 5px;
+    font-size: 13px;
+    text-decoration: line-through;
+    color: #959595;
+  }
+
+  &:hover {
+    .product__image {
+      img {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+    }
+
+    .product-custom__price {
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+
+    .product-custom__cart {
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.product-prop {
+  display: inline-block;
+  padding-left: 16px;
+  font-family: "Jost-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #111;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.new {
+  background-image: url("../img/new.png");
+}
+
+.best {
+  background-image: url("../img/best.png");
+}
+
+.product-custom {
+  overflow: hidden;
+  height: 18px;
+
+  &__price {
+    transition: transform 0.3s;
+  }
+
+  .to-cart {
+    font-weight: 700;
+    font-family: "Jost-Bold", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &__cart {
+    transition: transform 0.3s;
   }
 }
