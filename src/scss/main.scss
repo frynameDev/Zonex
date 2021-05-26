@@ -1,5 +1,11 @@
 // @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
 
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "settings";
+
 @import "./components/header";
 @import "./components/nav";
 @import "./components/shop-nav";
