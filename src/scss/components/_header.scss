@@ -3,8 +3,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
   z-index: 100;
+  width: 100%;
+
   &__container {
     display: flex;
     align-items: center;
@@ -45,6 +46,10 @@
 
 .catalog-header {
   padding-top: 38px;
+
+  @include xs {
+    padding-top: 0;
+  }
 }
 
 .free-delivery {
@@ -77,6 +82,9 @@
       fill: var(--color-white);
     }
   }
+  @include xs {
+    display: none;
+  }
 }
 
 .card-page {
@@ -87,10 +95,13 @@
 
 .nav {
   &__close {
+    display: none;
+
     @include md {
       position: absolute;
       right: 10%;
       top: 4%;
+      display: block;
     }
   }
 
